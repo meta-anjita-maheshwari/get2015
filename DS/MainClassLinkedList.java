@@ -32,5 +32,13 @@ public class MainClassLinkedList {
 
 		System.out.println("\ngetting item");
 		System.out.println(a.getitem(3));
+		
+		a.sortList();
+		System.out.println("\n\nSorted list is");
+		a.display();
+		
+		a.reverseLinkedList();
+		System.out.println("\n\nReverse linked list is");
+		a.display();
 	}
 }

@@ -1,0 +1,7 @@
+0,Anjita,8559884783,anjita@gmail.com,DDSM,GWECA,Music/Dance/MathsPuzzels
+0,Deepali,8233249261,deepali@gmail.com,ABPS,GIT,Music/Dance/Games
+0,Sumitra,7548754856,sumitra@gmail.com,Farji School,PIT,Music/Dance
+0,Chetna,7415170199,chetna@gmail.com,School no. 1,PCE,Music/Dance/ReadingBooks
+0,Manish,9876598765,manish@gmail.com,ABC School,JECRC,Music/Dance
+1,GWECA,8003339711,gweca@gmail.com,Maths/Physics,Madhvi Jain/Uma Shankar,TCS/Infosys/Wipro
+1,Metacube,8993339711,Metacube@gmail.com,Physics/Hindi,Madhvi Jain/Uma Shankar,TCS/Infosys

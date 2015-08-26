@@ -1,7 +1,8 @@
 package Assignments;
 
 /**
- * @author Anjita this class shows basic function of linked list
+ * @author Anjita 
+ * this class shows basic function of linked list
  * @param <T>
  */
 public class Node<T> {
@@ -136,22 +137,24 @@ public class Node<T> {
 	boolean deleteByIndex(int position) {
 		Node<T> current = new Node<T>();
 		current = start;
-		if (position == 0) {
+		int count = 1;
+		if (position == 1) {
 			start = current.next;
-		}
-		int count = 0;
-		while (current != null) {
-			if (count == position - 1) {
-				current.next = current.next.next;
+		} else {
+			count = 2;
+			while (current != null) {
+				if (count == position) {
+					current.next = current.next.next;
 
+				}
+				count++;
+				current = current.next;
 			}
-			count++;
-			current = current.next;
+			if (count < position) {
+				return false;
+			}
 		}
-		if (count < position) {
-			return false;
-		}
-		return false;
+		return true;
 
 	}
 
@@ -173,5 +176,80 @@ public class Node<T> {
 			current = current.next;
 		}
 		return null;
+	}
+
+	/**
+	 * Reverses the linked list
+	 */
+	public void reverseLinkedList() {
+		if (start == null || start.next == null)
+			return;
+		Node<T> Second = start.next;
+		// store third node before we change
+		Node<T> Third = Second.next;
+		// Second's next pointer
+		Second.next = start; // second now points to head
+		start.next = null; // change head pointer to NULL
+		// only two nodes, which we already reversed
+		if (Third == null)
+			return;
+		Node<T> CurrentNode = Third;
+		Node<T> PreviousNode = Second;
+		while (CurrentNode != null) {
+			Node<T> NextNode = CurrentNode.next;
+			CurrentNode.next = PreviousNode;
+			PreviousNode = CurrentNode;
+			CurrentNode = NextNode;
+		}
+		start = PreviousNode; // reset the head node
+		Node<T> current = start;
+
+	}
+
+	/**
+	 * Sorts element of linked list
+	 * @return true if sorted successfully
+	 */
+	public boolean sortList() {
+		if (start == null || start.next == null)
+			return true;
+
+		Node<T> newHead = new Node<T>(start.nodeValue);
+		Node<T> pointer = start.next;
+
+		// loop through each element in the list
+		while (pointer != null) {
+			// insert this element to the new list
+
+			Node<T> innerPointer = newHead;
+			Node<T> next = pointer.next;
+
+			if ((int) pointer.nodeValue <= (int) newHead.nodeValue) {
+				Node<T> oldHead = newHead;
+				newHead = pointer;
+				newHead.next = oldHead;
+			} else {
+				while (innerPointer.next != null) {
+
+					if ((int) pointer.nodeValue > (int) innerPointer.nodeValue
+							&& (int) pointer.nodeValue <= (int) innerPointer.next.nodeValue) {
+						Node<T> oldNext = innerPointer.next;
+						innerPointer.next = pointer;
+						pointer.next = oldNext;
+					}
+
+					innerPointer = innerPointer.next;
+				}
+
+				if (innerPointer.next == null
+						&& (int) pointer.nodeValue > (int) innerPointer.nodeValue) {
+					innerPointer.next = pointer;
+					pointer.next = null;
+				}
+			}
+			pointer = next;
+		}
+		start = newHead;
+		return true;
 	}
 }

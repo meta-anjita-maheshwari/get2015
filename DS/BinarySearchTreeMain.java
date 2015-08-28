@@ -27,7 +27,8 @@ public class BinarySearchTreeMain {
 			System.out.println("enter 1 for Inorder traversal");
 			System.out.println("enter 2 for Preorder Traversal");
 			System.out.println("enter 3 for Postorder Traversal");
-			System.out.println("enter 4 for exit");
+			System.out.println("enter 4 for mirror image check");
+			System.out.println("enter 5 for exit");
 			System.out.println("enter your choice");
 			choice = sc.nextInt();
 			switch (choice) {
@@ -44,11 +45,21 @@ public class BinarySearchTreeMain {
 				binarySearchTree.printPostorder();
 				break;
 			case 4:
+				if(binarySearchTree.checkMirrorImageCondition())
+				{
+					System.out.println("Both trees are  Image to each other");
+				}
+				else
+				{
+					System.out.println("Both trees are not Image to each other");	
+				}
+				break;
+			case 5:
 				System.exit(0);
 			default:
 				System.out.println("Enter correct choice");
 			}
-		} while (choice != 4);
+		} while (choice != 5);
 		sc.close();
 	}
 

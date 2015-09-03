@@ -91,10 +91,11 @@ public class EmployeeMain {
 		System.out.println(employee1);
 	}
 
-	/**
+/**
 	 * Sort in Natural order - Repeatation not allowed
 	 */
 	public void sortWithoutRepeat() {
+		Collections.sort(employee1);
 		Set<Employee> employees2 = new HashSet<Employee>(employee1);
 		System.out.println("Sort in Natural order - Repeatation not allowed");
 		System.out.println(employees2);

@@ -94,7 +94,7 @@ public class SortingTestClass {
 		int answer[] = counting.countingSort(input);
 		for (int i = 1; i < answer.length; i++) {
 			if (answer[i - 1] > answer[i]) {
-				fail("radix sort fails");
+				fail("counting sort fails");
 			}
 		}
 	}
@@ -121,7 +121,7 @@ public class SortingTestClass {
 		int answer[] = bubble.bubbleSort(input);
 		for (int i = 1; i < answer.length; i++) {
 			if (answer[i - 1] > answer[i]) {
-				fail("radix sort fails");
+				fail("bubble sort fails");
 			}
 		}
 	}
@@ -148,7 +148,7 @@ public class SortingTestClass {
 		int answer[] = quick.quickSort(0, input.length, input);
 		for (int i = 1; i < answer.length; i++) {
 			if (answer[i - 1] > answer[i]) {
-				fail("radix sort fails");
+				fail("quick sort fails");
 			}
 		}
 	}

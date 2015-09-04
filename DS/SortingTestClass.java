@@ -145,7 +145,7 @@ public class SortingTestClass {
 	public void quickTestNegative() {
 		ComparisonSort quick = new ComparisonSort();
 		int input[] = { 1222, 710, 2, 71, 1520, 454, 13, 17, 88, 25, 61, 43 };
-		int answer[] = quick.quickSort(0, input.length, input);
+		int answer[] = quick.quickSort(0, input.length-1, input);
 		for (int i = 1; i < answer.length; i++) {
 			if (answer[i - 1] > answer[i]) {
 				fail("quick sort fails");

@@ -1,0 +1,40 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	background: #E5E1D6;
+}
+
+#wrapper {
+	margin: 0 auto;
+	width: 700px;
+	height: 800px;
+	background: #FFF;
+}
+
+#header {
+	background: #AED1ED;
+	height: 60px;
+	text-align: center;
+	padding-top: 30px;
+	font-size: 40px;
+	font-weight: bold;
+	font-style: oblique;
+}
+
+#inner {
+	width: 400px;
+	margin-bottom: 20px;
+	position: relative;
+	left: 30px;
+	top: 20px;
+	float: inherit;
+}
+
+#image {
+	width: 400px;
+	margin: 10px;
+	position: relative;
+	left: 20px;
+	top: 10px;
+	float: right;
+}

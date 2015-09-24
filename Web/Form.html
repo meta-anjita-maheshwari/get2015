@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="FormStyle.css" type="text/css">
+</head>
+<body>
+	<form action="action_page.php" method="get">
+		<header> Survey Form </header>
+		<section>
+			<lable class="left">Name: </lable>
+				<input class="input" type="text" placeholder="First Name" required="required"> 
+				<input type="text" placeholder="Last Name" style="margin-left:350px ; " required="required"> 
+			<br> 
+			<br>
+			<lable class="left">Date Of Birth: </lable>
+				<input class="input" id="startdate" name="startdate" min="2014-01-01" max="2016-01-01" type="date"> <br> <br>
+			<lable class="left">Permanent Address:</lable>
+				<input class="input" type="text" placeholder="Address" required="required">
+			<br> 
+			<br>
+			<lable class="left">Current Address:</lable>
+				<input class="input" type="text" placeholder="Address" required="required">
+			<br> 
+			<br>
+			<lable class="left">City: </lable>
+				<input class="input" list="City" name="City" placeholder="Select City">
+					<datalist id="City">
+						<option value="Ajmer">
+						<option value="Jaipur">
+						<option value="Jodhpur">
+						<option value="Kota">
+						<option value="Delhi">
+					</datalist>
+			<br> 
+			<br>
+
+			<lable class="left"> E-Mail ID: </lable>
+				<input class="input" type="email" name="email" required="required" placeholder="@gmail.com"> <br> <br>
+			<lable class="left"> Rating: </lable>
+				<input class="input" type="range" name="points" min="0" max="10"> 
+			<br>
+			<br> 
+				<input class="input" type="submit" >
+		</section>
+	</form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+@CHARSET "ISO-8859-1";
+
+#div1 {
+	 width: 500px;
+    height: 500px;
+    background-color: yellow;
+    position: relative;
+    margin: 0px auto;
+}
+
+#div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    top:200px;
+    left:200px;
+    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+}
+
+@-webkit-keyframes example {
+   0%   {background-color: red; top: 0px;left: 0px;}
+    25%  {background-color: #ee9b40; top: 0px;left: 400px;}
+    50%  {background-color: blue; top: 400px;left: 400px;}
+    75% {background-color: green; top: 400px;left: 0px;}
+    100%   {background-color: red; top: 0px;left: 0px;}
+}
+
+@keyframes example {
+    0%   {background-color: red; top: 0px;left: 0px;}
+    25%  {background-color: #ee9b40; top: 0px;left: 400px;}
+    50%  {background-color: blue;top: 400px;left: 400px;}
+    75% {background-color: green;top: 400px;left: 0px;}
+    100%   {background-color: red; top: 0px;left: 0px;}
+}

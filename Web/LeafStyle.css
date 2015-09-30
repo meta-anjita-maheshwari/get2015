@@ -1,0 +1,32 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	background-color: #fcf5c5;	
+}
+
+section {
+	width: 700px;
+	height: 700px; 
+	margin:0px auto;
+	background-image :url("TreeImage.jpg"), url("LeafTexture.jpg");
+	background-position: right bottom ,left top;
+	background-repeat:no-repeat,repeat;
+	background-size:40% 40%;
+	border-style: groove;
+	border-color: #48a62d;
+	border-width:20px;
+	padding: 30px;
+}
+
+#advleaf {
+	width: 200px;
+	height: 200px; 
+	background : #5ebe41;
+	border-width: 4px 30px 4px 30px;
+	border-height: 30px 30px 30px 30px;
+	border-style: groove;
+	border-color: #249b1e #249b1e #249b1e #249b1e;
+	border-radius: 0 120px 0 120px;
+	-moz-border-radius: 0 120px 0 120px;
+	-webkit-border-radius: 0 120px 0 120px;
+}

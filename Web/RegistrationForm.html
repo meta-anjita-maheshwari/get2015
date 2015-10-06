@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="FormSampleStyle.css" type="text/css">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+		<header>REGISTRATION FORM</header>
+			<nav>
+				<table>
+					<tr>
+						<td>First Name:</td>
+						<td><input id="d1" type="text" placeholder="First Name"></td>
+					</tr>
+					<tr>
+						<td>Last Name:</td>
+						<td><input id="d2" type="text" placeholder="Last Name"></td>
+					</tr>
+					<tr>
+						<td>Password:</td>
+						<td><input id="d3" type="password" placeholder="Enter Password" ></td>
+					</tr>
+					<tr>
+						<td>Confirm Password:</td>
+						<td><input id="d4" type="password" placeholder="Re-Enter Password"></td>
+					</tr>
+					<tr>
+						<td>Age:</td>
+						<td><input id="d5" type="number" value="18" step=.1></td>
+					</tr>
+					<tr>
+						<td>State:</td>
+						<td>
+							<select id="d6" onchange="citySelect()" style="width: 173px; ">
+								<option selected='selected' disabled>Select</option>
+								<option>Rajasthan</option>
+								<option>MP</option>
+								<option>UP</option>
+								<option>Maharashtra</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>City:</td>
+						<td>
+							<select id="d7" style="width: 172px; ">
+								<option selected="selected">Select</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Address line 1:</td>
+						<td><input id="d8" type="text" placeholder="Address line 1"></td>
+					</tr>
+					<tr>
+						<td><input id="d9" type="checkbox" onClick="disable()" /></td>
+						<td>I accept all the conditions.</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input id="d10" type="button" disabled="disabled" onclick="check()" value="Submit" /></td>
+					</tr>
+				</table>
+			</nav>
+	</section>
+	
+	<script type="text/javascript">
+		function citySelect(){
+			var s1=document.getElementById("d6").value;
+			var c1=document.getElementById("d7");
+			
+			if(s1=="Rajasthan"){
+				c1.innerHTML="<option selected='selected' disabled>Select</option><option>Ajmer</option><option>Jaipur</option><option>Kota</option><option>Jodhpur</option>";
+			}
+			else if(s1=="MP"){
+				c1.innerHTML="<option selected='selected' disabled>Select</option><option>Indor</option><option>Mandsor</option><option>Bhopal</option><option>Gwalior</option>";
+			}
+			else if(s1=="UP"){
+				c1.innerHTML="<option selected='selected' disabled>Select</option><option>Allahabad</option><option>Bareilly</option><option>Lucknow</option><option>Sitapur</option>";
+			}
+			else if(s1=="Maharashtra"){
+				c1.innerHTML="<option selected='selected' disabled>Select</option><option>Mumbai</option><option>Pune</option><option>Nagpur</option><option>Thane</option>";
+			}
+		}
+		
+		function disable(){
+			if(document.getElementById("d9").checked){
+			document.getElementById("d10").disabled=false;	
+			}
+			else{
+			document.getElementById("d10").disabled=true;
+			}
+		}
+		
+		function check(){
+			var x1=document.getElementById("d1").value;
+			var x2=document.getElementById("d2").value;
+			var x3=document.getElementById("d3").value;
+			var x4=document.getElementById("d4").value;
+			var x5=document.getElementById("d5").value;
+			var x6=document.getElementById("d6").value;
+			var x7=document.getElementById("d7").value;
+			var x8=document.getElementById("d8").value;
+			var x9=document.getElementById("d9").value;
+			var x10=document.getElementById("d10").value;
+			if(x1==""){
+				alert("Enter first name");
+			}
+			else if(x2==""){
+				alert("Enter last name");
+			}
+			else if(x3==""){
+				alert("Enter Password");
+			}
+			else if(x4==""){
+				alert("Please confirm Password");
+			}
+			else if(x3 != x4){
+				alert("Password does not match");
+			}
+			else if(x6 == "Select"){
+				alert("Select State");
+			}
+			else if(x7 == "Select"){
+				alert("Select City");
+			}
+			else{
+				alert("Registration is successful");
+			}
+		}
+	</script>
+</body>
+</html>

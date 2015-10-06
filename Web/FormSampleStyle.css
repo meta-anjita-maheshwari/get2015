@@ -1,0 +1,41 @@
+@CHARSET "ISO-8859-1";
+
+/* whole body color is #dce7da*/
+body {
+	background-color: #dce7da;
+}
+
+/*Section is the main form area.*/
+section {
+	height: 700px;
+	width: 500px;
+	background-color: #b6b6b6;
+	position: relative;
+	top: 0px;
+	left: 500px;	
+	margin: 50px;
+}
+
+/*Header contains heading of the form, i.e. REGISTRATION FORM*/
+header {
+	background-color: #c1d3be;
+	height: 50px;
+	text-align: center;
+	padding-top: 20px;
+	font-size: xx-large;
+	font-style: italic;
+}
+
+/*nav is form information area.*/
+nav {
+	height: 650px;
+	width: 500px;
+	background-color: #c0c0c0;
+}
+
+/*Information is stored in table format.*/
+table {
+	margin-left:50px;
+	width:450px;
+	height:600px;
+}

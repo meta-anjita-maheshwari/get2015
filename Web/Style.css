@@ -1,0 +1,59 @@
+@CHARSET "ISO-8859-1";
+
+/*body is defined here*/
+body {
+	background-color: #abbcc5;
+}
+
+/*section asks for the number of rows*/
+section {
+	padding-top:5px;
+	background-color: #b8c8f1;
+	width: 700px;
+	height: 200px;
+	position: relative;
+	top:50px;
+	left: 400px;
+}
+
+/*Shows message for entering number of rows*/
+p {
+	font-size: x-large;
+	font-style: italic;
+	text-align: center;
+}
+
+/*class having id=number define input type=number*/
+#number {
+	position: relative;
+	top: 20px;
+	left: 270px;
+}
+
+/*class having id=button define button*/
+#button {
+	position: relative;
+	top: 20px;
+	left: 340px;
+}
+
+/*class having id=button define button*/
+#button1 {
+	position: relative;
+	margin-top:2px;
+	left: 730px;
+}
+
+/*table of no+1 X 3, where no=number of rows entered*/
+table {
+	position: relative;
+	top: 20px;
+	left: 150px;
+}
+
+/*table of no X 12, where no=number of rows entered*/
+#table1 {
+	position: relative;
+	top: 20px;
+	left: 30px;
+}

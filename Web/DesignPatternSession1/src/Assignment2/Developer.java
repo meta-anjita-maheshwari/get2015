@@ -1,6 +1,3 @@
-/**
- * 
- */
 package Assignment2;
 
 /**
